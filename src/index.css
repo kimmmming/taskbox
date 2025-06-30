@@ -29,6 +29,7 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  min-height: calc(100vh - 140px); /* 减去header和footer的高度 */
 }
 
 .task-item {
@@ -88,9 +89,20 @@ html, body {
 @media (max-width: 768px) {
   .main-content {
     padding: 16px;
+    min-height: calc(100vh - 120px); /* 移动端调整高度 */
   }
   
   .ant-col {
     margin-bottom: 16px;
+  }
+
+  /* Footer移动端样式优化 */
+  .ant-layout-footer {
+    padding: 24px 16px 16px !important;
+  }
+
+  .ant-layout-footer .ant-col[data-span="24"] {
+    text-align: center !important;
+    margin-bottom: 8px;
   }
 } 

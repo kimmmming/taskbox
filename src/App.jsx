@@ -2,6 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from 'antd'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import TaskList from './components/TaskList'
 import Statistics from './components/Statistics'
 import Projects from './components/Projects'
@@ -12,7 +13,7 @@ const { Content } = Layout
 function App() {
   return (
     <div className="app-container">
-      <Layout>
+      <Layout style={{ minHeight: '100vh' }}>
         <Header />
         <Content className="main-content">
           <Routes>
@@ -23,6 +24,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
           </Routes>
         </Content>
+        <Footer />
       </Layout>
     </div>
   )

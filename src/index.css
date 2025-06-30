@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.task-item {
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-completed {
+  opacity: 0.7;
+}
+
+.task-completed .task-title {
+  text-decoration: line-through;
+}
+
+.priority-high {
+  border-left: 4px solid #ff4d4f;
+}
+
+.priority-medium {
+  border-left: 4px solid #faad14;
+}
+
+.priority-low {
+  border-left: 4px solid #52c41a;
+}
+
+.status-tag {
+  font-size: 12px;
+}
+
+.stats-card {
+  text-align: center;
+}
+
+.stats-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-state-icon {
+  font-size: 64px;
+  color: #d9d9d9;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+  
+  .ant-col {
+    margin-bottom: 16px;
+  }
+} 
